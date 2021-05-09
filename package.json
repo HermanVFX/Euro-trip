@@ -1,0 +1,24 @@
+{
+  "name": "euro_way",
+  "version": "0.0.1",
+  "description": "atistation-task",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-sass": "^4.1.0",
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HermanVFX/Makhiyanov_way.git"
+  },
+  "author": "HermanVFX",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HermanVFX/Makhiyanov_way/issues"
+  },
+  "homepage": "https://github.com/HermanVFX/Makhiyanov_way#readme"
+}
