@@ -1,0 +1,24 @@
+@import'global/color.scss';
+@import'global/normilize.scss';
+@import'global/fonts.scss';
+
+@import'blocks/body.scss';
+@import'blocks/header.scss';
+@import'blocks/banner.scss';
+@import'blocks/places.scss';
+@import'blocks/tabs.scss';
+@import'blocks/price.scss';
+@import'blocks/contact.scss';
+
+@import'blocks/footer.scss';
+@import'blocks/footer-next-way.scss';
+@import'blocks/footer-contacts.scss';
+@import'blocks/footer-corp-way.scss';
+
+@import'blocks/paopup.scss';
+
+.visually-hidden {
+  visibility: hidden;
+}
+p {margin: 0;}
+

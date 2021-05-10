@@ -1,0 +1,50 @@
+.header {
+  width: 1156px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  height: 99px;
+  &__logo {
+    margin-top: 39px;
+  }
+  &__main-nav-toggle {
+    visibility: hidden;
+  }
+  &__main-nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 490px;
+    margin-top: 42px;
+  }
+  &__item {
+    list-style: none;
+    width: max-content;
+  }
+  &__item-index {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    color: $darck;
+    text-decoration: none;
+    &--phone {
+      text-decoration: underline;
+      position: relative;
+      font-size: 18px;
+      font-weight: 400;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-image: url(../img/icon/phone-black.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        left: -30px;
+        top: -3px;
+      }
+    }
+  }
+}

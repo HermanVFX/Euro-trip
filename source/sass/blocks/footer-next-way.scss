@@ -1,0 +1,13 @@
+.next-way {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  &__col {
+    padding: 0;
+    margin-right: 47px;
+  }
+  &__item {
+    list-style: none;
+    margin: 5px 0 5px 0;
+  }
+}

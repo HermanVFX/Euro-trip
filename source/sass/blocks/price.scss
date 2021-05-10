@@ -1,0 +1,109 @@
+.price {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1170px;
+  margin: 0px auto 0px auto;
+  z-index: 1;
+  position: relative;
+  &__paopup {
+    position: absolute;
+  }
+  &__description {
+    width: 370px;
+    order: 2;
+  }
+  &__sute {
+    width: 310px;
+    background: #FFFFFF;
+    border: 1px solid rgba(44, 46, 63, 0.3);
+    border-radius: 6px;
+    padding: 40px 30px 30px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__name {
+    margin: 0;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    width: max-content;
+  }
+  &__sum {
+    font-size: 25px;
+    line-height: 34px;
+    font-weight: 700;
+  }
+  &__reference {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 36px;
+    padding-bottom: 28px;
+    width: 310px;
+    border-bottom: 1px solid rgba(44, 46, 63, 0.3);
+  }
+  &__list {
+    list-style-image: url(../img/icon/check.svg);
+    font-size: 16px;
+    line-height: 32px;
+    width: 200px;
+  }
+  &__button {
+    border: none;
+    background-color: $orange;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 310px;
+    height: 75px;
+  }
+  &__head {
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 90px;
+    color: $darck-light;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 175px;
+      height: 2.92px;
+      background-color: $orange;
+      left: 0;
+      bottom: -20px;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 170%;
+  }
+  &__contact {
+    width: 249px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 34px;
+    margin-left: 46px;
+    margin-top: 60px;
+  }
+  &__phone {
+    width: 249px;
+    font-size: 20px;
+    line-height: 32px;
+    margin-left: 46px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-image: url(../img/icon/phone-orange.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      left: -30px;
+      top: -3px;
+    }
+  }
+}
