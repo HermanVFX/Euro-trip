@@ -41,3 +41,29 @@
     }
   }
 }
+
+@media (max-width:$mobile) {
+  .contacts {
+    width: 288px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px solid #D7D9DF;
+    border-bottom: 1px solid #D7D9DF;
+    padding-left: 0;
+    padding-top: 30px;
+    padding-bottom: 19px;
+    justify-content: center;
+    &__email {
+      margin-top: 27px;
+      margin-bottom: 12px;
+      &::after {
+        left: -40px;
+      }
+    }
+    &__phone {
+      &::after {
+        left: -40px;
+      }
+    }
+  }
+}

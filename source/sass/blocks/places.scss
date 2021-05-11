@@ -1,5 +1,6 @@
 .places {
-  width: 1170px;
+  width: 100%;
+  max-width: 1170px;
   margin: 199px auto 0 auto;
   &__head {
     width: 358px;
@@ -27,6 +28,7 @@
     color: rgba(44, 46, 63, 0.7);
   }
   &__list {
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -76,5 +78,81 @@
     color: white;
     text-decoration: none;
     padding: 30px 25px 30px 25px;
+  }
+}
+
+@media (max-width:$tablet) {
+  .places {
+    max-width: 634px;
+    margin: 80px auto 0 auto;
+    &__head {
+      width: 100%;
+      text-align: center;
+      font-size: 30px;
+      line-height: 45px;
+      &::after {
+        visibility: hidden;
+      }
+    }
+    &__tagline {
+      width: 343px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__item {
+      margin: 10px 15px 9px 14px;
+      position: relative;
+      list-style: none;
+      &:hover .places__button-wrapper{
+        visibility:visible;
+        opacity: 1;
+      }
+    }
+    &__photo {
+      width: 288px;
+      height: 425px;
+    }
+    &__name {
+      position: absolute;
+      bottom: -26px;
+      left: 40px;
+      padding-bottom: 16px;
+    }
+    &__button-wrapper {
+      height: 425px;
+      width: 288px;
+    }
+    &__button {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width:$mobile) {
+  .places {
+    max-width: 634px;
+    margin: 325px auto 0 auto;
+    &__head {
+      width: 100%;
+      font-size: 24px;
+      line-height: 36px;
+    }
+    &__tagline {
+      width: 80%;
+    }
+    &__item {
+      margin: 20px auto 15px auto;
+      position: relative;
+      &:hover .places__button-wrapper{
+        visibility:visible;
+        opacity: 1;
+      }
+    }
   }
 }

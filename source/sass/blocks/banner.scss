@@ -36,3 +36,58 @@
     padding: 30px 179px 30px 40px;
   }
 }
+
+@media (max-width:$tablet) {
+  .banner {
+    height:344px;
+    background-image: url(../img/banner-top.jpg);
+    &__wrapper {
+      width: 100%;
+      padding-top: 60px;
+      margin: 0;
+      text-align: center;
+    }
+    &__head {
+      font-size: 30px;
+      line-height: 45px;
+    }
+    &__tagline {
+      width: 398px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 46px;
+    }
+    &__button {
+      font-size: 10px;
+      line-height: 12px;
+      padding: 19px 107px 19px 40px;
+    }
+  }
+}
+
+@media (max-width:$mobile) {
+  .banner {
+    height:235px;
+    background-image: url(../img/banner-top.jpg);
+    &__wrapper {
+      width: 100%;
+      padding-top: 81px;
+      margin: 0;
+      text-align: center;
+    }
+    &__head {
+      width: 80%;
+      margin: auto;
+      font-size: 24px;
+      line-height: 36px;
+    }
+    &__tagline {
+      width: 80%;
+      margin-top: 102px;
+      color: $darck-light;
+    }
+    &__button {
+      padding: 19px 145px 19px 40px;
+    }
+  }
+}

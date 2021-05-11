@@ -7,3 +7,15 @@
     line-height: 170%;
   }
 }
+
+@media (max-width:$mobile) {
+  .corp-way {
+    width: 288px;
+    padding-left: 0;
+    &__text {
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 170%;
+    }
+  }
+}

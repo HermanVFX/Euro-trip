@@ -1,6 +1,7 @@
 @import'global/color.scss';
 @import'global/normilize.scss';
 @import'global/fonts.scss';
+@import'global/display.scss';
 
 @import'blocks/body.scss';
 @import'blocks/header.scss';
@@ -19,6 +20,12 @@
 
 .visually-hidden {
   visibility: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  font-size: 0;
 }
 p {margin: 0;}
 

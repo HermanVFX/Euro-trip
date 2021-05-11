@@ -2,7 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 1170px;
+  width: 100%;
+  max-width: 1170px;
   margin: 25px auto 81px auto;
   &__next-way,
   &__contacts,
@@ -18,3 +19,31 @@
   }
 }
 
+@media (max-width:$tablet) {
+  .footer {
+    justify-content: center;
+    margin: 25px auto 81px auto;
+    &__next-way{
+      width: 49%;
+    }
+    &__contacts{
+      width: 49%;
+    }
+    &__corp-way {
+      width: 100%;
+    }
+
+  }
+}
+@media (max-width:$mobile) {
+  .footer {
+    margin: 70px auto 25px auto;
+    text-align: center;
+    &__next-way{
+      width: 100%;
+    }
+    &__contacts{
+      width: 100%;
+    }
+  }
+}

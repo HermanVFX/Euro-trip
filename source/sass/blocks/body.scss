@@ -3,4 +3,8 @@
   line-height: 18px;
   font-weight: 400;
   color:rgba(44, 46, 63, 0.7);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
