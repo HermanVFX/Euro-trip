@@ -13,14 +13,14 @@
             <img class="header__logo-image" src="img/logo.svg" width="57" height="22" alt="Логотип «Way»">
         </a>
 
-        <button class="header__main-nav-toggle" type="button">
+        <button class="header__main-nav-toggle" id="menuButton" type="button">
             <span class="visually-hidden">Открыть меню</span>
         </button>
 
-        <nav class="header__main-nav  header__main-nav--show">
-            <ul class="header__main-nav-list" >
-                <li class="header__item"><a class="header__item-index" href="#">О путешествии</a></li>
-                <li class="header__item"><a class="header__item-index" href="#">Цены</a></li>
+        <nav class="header__main-nav visually-hidden-menu">
+            <ul class="header__main-nav-list">
+                <li class="header__item"><a id="btn" class="header__item-index" href="#places">О путешествии</a></li>
+                <li class="header__item"><a id="btn2" class="header__item-index" href="#price">Цены</a></li>
                 <li class="header__item--phone"><a class="header__item-index header__item-index--phone" href="#">+7 (499) -784-684-46</a></li>
             </ul>
         </nav>
@@ -34,13 +34,13 @@
           <div class="banner__wrapper">
             <h1 class="banner__head">Путешествие по Европе</h1>
             <p class="banner__tagline">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
-            <a href="#" class="banner__button">смотреть тур</a>
+            <a href="#places" class="banner__button">смотреть тур</a>
           </div>
         </div>
 
         <!-- Места посещения -->
 
-        <section class="places">
+        <section id="places" class="places">
             <h2 class="places__head">Места посещения</h2>
             <p class="places__tagline">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
 
@@ -52,7 +52,7 @@
                     <img src="img/greece.jpg" width="350" height="430" alt="Греция" class="places__photo">
                     <h3 class="places__name">Греция</h3>
                     <div class="places__button-wrapper">
-                        <a href="#" class="places__button">смотреть подробнее</a>
+                        <a href="#tabs" class="places__button places__button--greece">смотреть подробнее</a>
                     </div>
                 </li>
 
@@ -60,7 +60,7 @@
                     <img src="img/albania.jpg" width="350" height="430" alt="Греция" class="places__photo">
                     <h3 class="places__name">Албания</h3>
                     <div class="places__button-wrapper">
-                        <a href="#" class="places__button">смотреть подробнее</a>
+                        <a href="#tabs" class="places__button places__button--albania">смотреть подробнее</a>
                     </div>
                 </li>
 
@@ -68,7 +68,7 @@
                     <img src="img/macedonia.jpg" width="350" height="430" alt="Греция" class="places__photo">
                     <h3 class="places__name">Македония</h3>
                     <div class="places__button-wrapper">
-                        <a href="#" class="places__button">смотреть подробнее</a>
+                        <a href="#tabs" class="places__button places__button--macedonia">смотреть подробнее</a>
                     </div>
                 </li>
 
@@ -76,7 +76,7 @@
                     <img src="img/montenegro.jpg" width="350" height="430" alt="Греция" class="places__photo">
                     <h3 class="places__name">Черногория</h3>
                     <div class="places__button-wrapper">
-                        <a href="#" class="places__button">смотреть подробнее</a>
+                        <a href="#tabs" class="places__button places__button--montenegro">смотреть подробнее</a>
                     </div>
                 </li>
 
@@ -84,7 +84,7 @@
                     <img src="img/croatia.jpg" width="350" height="430" alt="Греция" class="places__photo">
                     <h3 class="places__name">Хорватия</h3>
                     <div class="places__button-wrapper">
-                        <a href="#" class="places__button">смотреть подробнее</a>
+                        <a href="#tabs" class="places__button places__button--croatia">смотреть подробнее</a>
                     </div>
                 </li>
 
@@ -93,28 +93,28 @@
 
         <!-- Вкладки городов -->
 
-        <section class="tabs">
+        <section id="tabs" class="tabs">
             <h2 class="visually-hidden">Подробное описание</h2>
 
             <!-- Кнопки -->
 
-            <div class="tabs__button-list">
-                <button class="tabs__button tabs__button--active">Греция</button>
-                <button class="tabs__button">Албания</button>
-                <button class="tabs__button">Македония</button>
-                <button class="tabs__button">Черногория</button>
-                <button class="tabs__button">Хорватия</button>
+            <div class="tabs__button-list" id="test">
+                <input onclick="handleClick();" name="tabs" type="radio" class="tabs__button visually-hidden tabs__button--greece" id="greece" checked><label for="greece">Греция</label>
+                <input onclick="handleClick();" name="tabs" type="radio" class="tabs__button visually-hidden tabs__button--albania" id="albania"><label for="albania">Албания</label>
+                <input onclick="handleClick();" name="tabs" type="radio" class="tabs__button visually-hidden tabs__button--macedonia" id="macedonia"><label for="macedonia">Македония</label>
+                <input onclick="handleClick();" name="tabs" type="radio" class="tabs__button visually-hidden tabs__button--montenegro" id="montenegro"><label for="montenegro">Черногория</label>
+                <input onclick="handleClick();" name="tabs" type="radio" class="tabs__button visually-hidden tabs__button--croatia" id="croatia"><label for="croatia">Хорватия</label>
             </div>
 
             <!-- Вкладки -->
 
             <div class="tabs__tab-wrapper">
 
-                <div class="tabs__tab tabs__tab--active">
+                <div class="tabs__tab tabs__tab--active tabs__tab--greece">
                     <div class="tabs__description">
                         <h3 class="tabs__head">Греция</h3>
                         <p class="tabs__description-text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры. </p>
-                        <a href="#" class="tabs__pay-button">купить тур сейчас</a>
+                        <button class="tabs__pay-button paopup-button">купить тур сейчас</button>
                     </div>
                     <div class="tabs__feedback">
                         <img src="img/greece.jpg" width="430" height="596" alt="Греция" class="tabs__feedback-photo">
@@ -127,11 +127,11 @@
                     </div>
                 </div>
 
-                <div class="tabs__tab">
+                <div class="tabs__tab tabs__tab--albania">
                     <div class="tabs__description">
                         <h3 class="tabs__head">Албания</h3>
                         <p class="tabs__description-text">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния. </p>
-                        <a href="#" class="tabs__pay-button">купить тур сейчас</a>
+                        <button class="tabs__pay-button paopup-button">купить тур сейчас</button>
                     </div>
                     <div class="tabs__feedback">
                         <img src="img/albania.jpg" width="430" height="596" alt="Греция" class="tabs__feedback-photo">
@@ -144,11 +144,11 @@
                     </div>
                 </div>
 
-                <div class="tabs__tab">
+                <div class="tabs__tab tabs__tab--macedonia">
                     <div class="tabs__description">
                         <h3 class="tabs__head">Македония</h3>
                         <p class="tabs__description-text">В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.</p>
-                        <a href="#" class="tabs__pay-button">купить тур сейчас</a>
+                        <button class="tabs__pay-button paopup-button">купить тур сейчас</button>
                     </div>
                     <div class="tabs__feedback">
                         <img src="img/macedonia.jpg" width="430" height="596" alt="Греция" class="tabs__feedback-photo">
@@ -161,11 +161,11 @@
                     </div>
                 </div>
 
-                <div class="tabs__tab">
+                <div class="tabs__tab tabs__tab--montenegro">
                     <div class="tabs__description">
                         <h3 class="tabs__head">Черногория</h3>
                         <p class="tabs__description-text">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км. </p>
-                        <a href="#" class="tabs__pay-button">купить тур сейчас</a>
+                        <button class="tabs__pay-button paopup-button">купить тур сейчас</button>
                     </div>
                     <div class="tabs__feedback">
                         <img src="img/montenegro.jpg" width="430" height="596" alt="Греция" class="tabs__feedback-photo">
@@ -178,11 +178,11 @@
                     </div>
                 </div>
 
-                <div class="tabs__tab">
+                <div class="tabs__tab tabs__tab--croatia">
                     <div class="tabs__description">
                         <h3 class="tabs__head">Хорватия</h3>
                         <p class="tabs__description-text">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.</p>
-                        <a href="#" class="tabs__pay-button">купить тур сейчас</a>
+                        <button class="tabs__pay-button paopup-button">купить тур сейчас</button>
                     </div>
                     <div class="tabs__feedback">
                         <img src="img/croatia.jpg" width="430" height="596" alt="Греция" class="tabs__feedback-photo">
@@ -199,7 +199,7 @@
 
         <!-- price -->
 
-        <div class="price">
+        <div id="price" class="price">
 
             <div class="price__description">
                 <h2 class="price__head">Цены</h2>
@@ -208,7 +208,7 @@
                 <p class="price__phone">+7 (499) -784-684-46</p>
             </div>
 
-            <div class="price__sute price__sute--active">
+            <div class="price__sute">
                 <p class="price__name">Комплексный</p>
                 <p class="price__sum price__sum--active">$1999</p>
                 <p class="price__reference">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
@@ -218,10 +218,10 @@
                     <li class="price__item">Завтраки, ужины в отелях и ланчи на природе</li>
                     <li class="price__item">Экскурсии по удивительно красивым местам Европы</li>
                 </ul>
-                <button class="price__button">купить тур сейчас</button>
+                <button class="price__button paopup-button">купить тур сейчас</button>
             </div>
 
-            <div class="price__sute price__sute">
+            <div class="price__sute">
                 <p class="price__name">Экономный</p>
                 <p class="price__sum">$1399</p>
                 <p class="price__reference">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
@@ -232,7 +232,7 @@
                     <li class="price__item">Только завтраки в отелях</li>
                     <li class="price__item">Экскурсии по удивительно красивым местам Европы</li>
                 </ul>
-                <button class="price__button">купить тур сейчас</button>
+                <button class="price__button paopup-button">купить тур сейчас</button>
             </div>
 
             <!-- paopup -->
@@ -241,9 +241,9 @@
               <div class="paopup__container">
                 <form class="paopup__form">
                   <p class="paopup__head">Купить тур </p>
-                  <input type="text" class="paopup__input">
-                  <input type="email" class="paopup__input">
-                  <button class="paopup__button">отправить</button>
+                  <input id="paopupPhone" type="tel" class="paopup__input">
+                  <input id="paopupEmail" type="email" class="paopup__input">
+                  <button type="button" onclick="paopupSaveLocalStorage()" class="paopup__button">отправить</button>
                 </form>
                 <div class="paopup__success visually-hidden">
                     <p class="paopup__success-text">Форма успешно отправлена, спасибо! :)</p>
@@ -260,9 +260,9 @@
             <form action="" class="contact__form">
                 <p class="contact__head">У Вас остались вопросы?</p>
                 <p class="contact__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-                <input type="phone" class="contact__input contact__input--phone" placeholder="+7 Введите 10 цифр номера">
-                <input type="e-mail" class="contact__input contact__input--e-mail" placeholder="E-mail">
-                <button class="contact__button">отправить</button>
+                <input id="contactPhone" type="tel" class="contact__input contact__input--phone" placeholder="+7 Введите 10 цифр номера">
+                <input id="contactEmail" type="e-mail" class="contact__input contact__input--e-mail" placeholder="E-mail">
+                <button type="button" onclick="contactSaveLocalStorage()" class="contact__button">отправить</button>
             </form>
         </div>
     </main>

@@ -73,10 +73,16 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: 40%;
+      &--close {
+        z-index: 2;
+        position: fixed;
+        background-image: url(../img/icon/close.svg);
+        right: 0;
+        background-color: transparent;
+      }
     }
     &__main-nav {
       position: fixed;
-      visibility: hidden;
       z-index: 1;
       background-color: white;
       width: 100%;

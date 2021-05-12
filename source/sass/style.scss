@@ -30,5 +30,16 @@ html {
   margin: -1px;
   font-size: 0;
 }
+.visually-hidden-menu {
+  visibility: hidden;
+}
+
+@media (min-width:$tablet) {
+  .visually-hidden-menu {
+    visibility: visible;
+  }
+}
+
+
 p {margin: 0;}
 

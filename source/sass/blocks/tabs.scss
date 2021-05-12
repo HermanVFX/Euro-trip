@@ -28,15 +28,9 @@
     margin-bottom: 80px;
   }
   &__button {
-    background-color: transparent;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    color:rgba(44, 46, 63, 0.3);
-    border: none;
-    padding: 0;
-    margin-bottom: 15px;
-    &--active {
+    visibility: hidden;
+    margin: 0;
+    &:checked + label {
       color: $orange;
     }
   }
@@ -77,6 +71,7 @@
     color: rgba(44, 46, 63, 0.7);
   }
   &__pay-button {
+    border: none;
     display: block;
     margin-top: 80px;
     width: max-content;
@@ -97,7 +92,7 @@
   }
   &__feedback-block {
     position: absolute;
-    right: -65%;
+    right: 0%;
     top:160px;
     background-color: white;
     display: flex;
@@ -171,9 +166,8 @@
     }
     &__button {
       letter-spacing: 1px;
-      &:not(:last-child){margin-right: 85px;}
-
-      &--active {
+      &:not(:last-child) + label{margin-right: 85px;}
+      &:checked + label{
         color: $orange;
       }
     }
@@ -386,4 +380,10 @@
       line-height: 19.5px;
     }
   }
+}
+
+
+// tab--click
+.tabs__button--greece:checked ~ .tabs__tab--greece {
+
 }
