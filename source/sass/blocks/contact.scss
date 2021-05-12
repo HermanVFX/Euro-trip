@@ -63,7 +63,7 @@
 
 @media (max-width:$tablet) {
   .contact {
-    margin: 125px auto auto auto;
+    margin: 97px auto auto auto;
     height: 385.59px;
     padding-top: 70px;
     &__form {
@@ -72,20 +72,25 @@
     }
     &__head {
       font-weight: 600;
+      letter-spacing: 0px;
+      margin-bottom: 7px;
       width: 100%;
       text-align: center;
       font-size: 25px;
-      line-height: 32px;
+    line-height: 32px;
       color: $darck;
       height: min-content;
     }
     &__text {
-      margin-top: 15px;
+      margin-top: 4px;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
       width: 100%;
       text-align: center;
     }
     &__input {
-      width: 261px;
+      width: 239px;
+      padding-left: 24px;
       height: 50px;
       border:1px solid #D7D9DF;
       border-radius:none;
@@ -102,8 +107,9 @@
       text-transform: uppercase;
       border: none;
       background-color: $orange;
-      width: 176px;
+      width: 252px;
       height: 50px;
+      margin-top: 14px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -112,28 +118,39 @@
 
 @media (max-width:$mobile) {
   .contact {
-    margin: 50px auto auto auto;
-    height: 441px;
-    padding-top: 0;
+    margin: 36px auto 0 auto;
+    height: 390px;
+    padding-top: 51px;
+    letter-spacing: 1px;
     background-image: none;
     background-color: #f8f8f8;
     &__form {
       height: 100%;
       width: 100%;
       position: static;
+      display: block;
       margin: auto;
       padding: 0;
       background-color: transparent;
+      box-shadow: none;
     }
     &__text {
-      margin-top: 15px;
-      width: 100%;
+      width: 90%;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 24px;
+      margin-top: 20px;
+      margin-bottom: -10px;
+      margin-left: auto;
+      margin-right: auto;
       text-align: center;
     }
     &__input {
-      width: 288px;
-      padding: 0;
-      margin: auto;
+      margin-top: 20px;
+      height: 50px;
+      width: 84.4%;
+      padding-left: 4.6%;
+      margin: 26px 6.4% -9px 4.6%;
     }
     &__button {
       font-size: 10px;
@@ -144,8 +161,10 @@
       text-transform: uppercase;
       border: none;
       background-color: $orange;
+      display: block;
       width: 288px;
       height: 50px;
+      margin-top: 23px;
       margin-left: auto;
       margin-right: auto;
     }

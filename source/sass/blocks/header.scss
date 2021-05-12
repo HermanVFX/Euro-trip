@@ -57,7 +57,11 @@
     height: 50px;
     &__logo {
       margin-top: 18.51px;
-      margin-left: 16px;
+      margin-left: 21px;
+    }
+    &__logo-image {
+      width: 44px;
+      height: 17px;
     }
     &__main-nav-toggle {
       visibility: visible;
@@ -99,9 +103,13 @@
 
 @media (max-width:$mobile) {
   .header {
+    &__logo {
+      margin-top: 18.51px;
+      margin-left: 16px;
+    }
     &__main-nav-toggle {
       width: 50px;
-      background-size: 60%;
+      background-size: 50%;
     }
   }
 }

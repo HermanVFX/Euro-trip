@@ -89,13 +89,16 @@
       width: 100%;
       text-align: center;
       font-size: 30px;
+      letter-spacing: 1.6px;
       line-height: 45px;
       &::after {
         visibility: hidden;
       }
     }
     &__tagline {
-      width: 343px;
+      width: 333px;
+      margin-top: -4px;
+      margin-bottom: 21px;
       text-align: center;
       margin-left: auto;
       margin-right: auto;
@@ -104,9 +107,10 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      margin-top: 12px;
     }
     &__item {
-      margin: 10px 15px 9px 14px;
+      margin: 19px 15px 0px 14px;
       position: relative;
       list-style: none;
       &:hover .places__button-wrapper{
@@ -117,11 +121,13 @@
     &__photo {
       width: 288px;
       height: 425px;
+      object-fit: cover;
     }
     &__name {
       position: absolute;
-      bottom: -26px;
-      left: 40px;
+      letter-spacing: 2 px;
+      bottom: -20px;
+      left: 36px;
       padding-bottom: 16px;
     }
     &__button-wrapper {
@@ -136,18 +142,24 @@
 
 @media (max-width:$mobile) {
   .places {
-    max-width: 634px;
-    margin: 325px auto 0 auto;
+    margin: 307px auto 0 auto;
     &__head {
       width: 100%;
       font-size: 24px;
       line-height: 36px;
+      letter-spacing: 0.4px;
     }
     &__tagline {
-      width: 80%;
-    }
+      width: 100%;
+      margin-top: 2px;
+      margin-bottom: 4px;
+
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: -0.466667px;
+          }
     &__item {
-      margin: 20px auto 15px auto;
+      margin: 5px auto 26px auto;
       position: relative;
       &:hover .places__button-wrapper{
         visibility:visible;

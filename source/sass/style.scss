@@ -18,6 +18,9 @@
 
 @import'blocks/paopup.scss';
 
+html {
+  font-family: "Montserrat"
+}
 .visually-hidden {
   visibility: hidden;
   position: absolute;

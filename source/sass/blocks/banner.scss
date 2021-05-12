@@ -7,10 +7,9 @@
   margin-top: 0;
   &__wrapper {
     width: 420px;
-    padding-top: 185px;
-    margin-right: 0px;
+    padding-top: 150px;
     float: right;
-    margin-right: 433px;
+    margin-right: 22%;
     color:rgba(255, 255, 255, 1);
   }
   &__head {
@@ -19,11 +18,12 @@
     font-weight: 600;
   }
   &__tagline {
+    margin-top: 16px;
     font-size: 16px;
     font-weight: 400;
     line-height: 27px;
     letter-spacing: -0.466667px;
-    margin-bottom: 46px;
+    margin-bottom: 50px;
   }
   &__button {
     font-size: 12px;
@@ -48,14 +48,19 @@
       text-align: center;
     }
     &__head {
+      margin-top: 0px;
+      letter-spacing: 1.3px;
       font-size: 30px;
       line-height: 45px;
     }
     &__tagline {
-      width: 398px;
+      width: 425px;
+      margin-top: -5px;
+      font-size: 15px;
+      letter-spacing: 1.2px;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 46px;
+      margin-bottom: 25px;
     }
     &__button {
       font-size: 10px;
@@ -69,6 +74,8 @@
   .banner {
     height:235px;
     background-image: url(../img/banner-top.jpg);
+    background-position: 52%;
+    background-size: cover;
     &__wrapper {
       width: 100%;
       padding-top: 81px;
@@ -76,15 +83,20 @@
       text-align: center;
     }
     &__head {
-      width: 80%;
+      width: 256px;
       margin: auto;
       font-size: 24px;
+      letter-spacing: -0.45px;
       line-height: 36px;
     }
     &__tagline {
-      width: 80%;
+      width: 90%;
       margin-top: 102px;
       color: $darck-light;
+      letter-spacing: -0.466667px;
+      margin-bottom: 34px;
+      font-size: 16px;
+      line-height: 27px;
     }
     &__button {
       padding: 19px 145px 19px 40px;

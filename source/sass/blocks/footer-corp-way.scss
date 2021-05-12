@@ -8,14 +8,36 @@
   }
 }
 
-@media (max-width:$mobile) {
+@media (max-width:$tablet) {
   .corp-way {
-    width: 288px;
-    padding-left: 0;
+    width: 100%;
+    text-align: center;
+    padding-left: 0px;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 9px;
+    border-top: 1px solid #D7D9DF;
+    padding-top: 28px;
     &__text {
       margin-top: 20px;
       font-size: 14px;
       line-height: 170%;
+    }
+  }
+
+}
+
+@media (max-width:$mobile) {
+  .corp-way {
+    width: 288px;
+    padding-left: 9px;
+    padding-top: 30px;
+    &__text {
+      width: 288px;
+      margin-top: 20px;
+      margin-left: -5px;
+      font-size: 15px;
+      line-height: 24px;
     }
   }
 }

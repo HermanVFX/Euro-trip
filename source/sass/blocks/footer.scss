@@ -21,13 +21,13 @@
 
 @media (max-width:$tablet) {
   .footer {
-    justify-content: center;
-    margin: 25px auto 81px auto;
+    justify-content: space-between;
+    margin: 82px auto 81px auto;
     &__next-way{
-      width: 49%;
+      width: 47%;
+      margin-left: 21px;
     }
     &__contacts{
-      width: 49%;
     }
     &__corp-way {
       width: 100%;
@@ -44,6 +44,14 @@
     }
     &__contacts{
       width: 100%;
+    }
+    &__head {
+      width: 100%;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 32px;
+      color: $darck;
+      margin: 0;
     }
   }
 }

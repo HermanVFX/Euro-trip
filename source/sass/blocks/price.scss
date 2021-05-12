@@ -24,7 +24,18 @@
     padding: 40px 30px 30px 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    &--active {
+      border: 3px solid $orange;
+    }
+    &--active > .price__name,
+    &--active > .price__sum {
+      color: $orange;
+    }
+    &--active > .price__item::after {
+      background-image:url(../img/icon/check.svg);
+      padding-left: 0px;
+    }
   }
   &__name {
     margin: 0;
@@ -47,10 +58,27 @@
     border-bottom: 1px solid rgba(44, 46, 63, 0.3);
   }
   &__list {
-    list-style-image: url(../img/icon/check.svg);
+    list-style: none;
     font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
     line-height: 32px;
     width: 200px;
+    padding: 0;
+  }
+  &__item {
+    position: relative;
+    &::after {
+      background-image:url(../img/icon/check-orange.svg);
+      content: '';
+      position: absolute;
+      height: 12px;
+      width: 14px;
+      left: -27px;
+      top: 10px;
+    }
   }
   &__button {
     border-radius: 0;
@@ -117,7 +145,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0px auto 0px auto;
+    margin: 10px auto 0px auto;
     z-index: 1;
     position: relative;
     &__paopup {
@@ -125,6 +153,7 @@
     }
     &__description {
       width: 100%;
+      max-width: 730px;
       order: 0;
     }
     &__sute {
@@ -132,24 +161,52 @@
       padding: 30px 0px 0px 0px;
       justify-content: center;
       margin: 25px;
+      &--active > .price__name {
+        line-height: 34px;
+        margin-bottom: 0;
+      }
     }
     &__name {
       font-size: 24px;
+      line-height: 34px;
+      margin-bottom: -20px;
+      letter-spacing: -0.4px;
       width: 248px;
       text-align: center;
     }
+    &__item {
+      margin-bottom: 0px;
+      font-size: 16px;
+      line-height: 32px;
+    }
+    &__list {
+      height: 353px;
+      margin-top: 19px;
+      margin-left: 6px;
+      // letter-spacing: 0.1px;
+    }
     &__sum {
-      font-size: 25px;
+      font-size: 27px;
       line-height: 34px;
       font-weight: 700;
+      margin-top: 29px;
+      margin-left: -16px;
       text-align: center;
       width: 100%;
+      &--active {
+        margin-top: 12px;
+        font-size: 26px;
+        margin-left: 0px;
+      }
     }
     &__reference {
       margin-top: 11px;
       padding-bottom: 10px;
       text-align: center;
-      width: 248px;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0px;
+      width: 90%;
       height: 71px;
       border-bottom: 1px solid rgba(44, 46, 63, 0.3);
     }
@@ -158,18 +215,21 @@
       line-height: 12px;
       width: 288px;
       height: 50px;
+      margin-top: -12px;
+      margin-bottom: -2px;
     }
     &__head {
       width: 100%;
       text-align: center;
       font-size: 30px;
       line-height: 45px;
+      margin-bottom: 21px;
       &::after {
         visibility: hidden;
       }
     }
     &__text {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 27px;
       width: 726px;
       text-align: center;
@@ -180,16 +240,19 @@
       width: 100%;
       text-align: center;
       font-size: 18px;
+      letter-spacing: 1.3px;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 60px;
+      margin-top: 32px;
     }
     &__phone {
       width: 100%;
       color: $orange;
       text-align: center;
       text-decoration: underline;
-      font-size: 18px;
+      font-size: 19px;
+      margin-top: 11px;
+      letter-spacing: 0.5px;
       margin-left: auto;
       margin-right: auto;
       &::after {
@@ -211,16 +274,23 @@
     }
     &__sute {
       width: 286px;
+      height: 584px;
       padding: 30px 0px 0px 0px;
       justify-content: center;
-      margin: 30px auto auto auto;
+      margin: 0px auto 26px auto;
     }
     &__name {
       font-size: 24px;
       width: 248px;
+      margin-bottom: 0;
       text-align: center;
+      &:last-child {
+      }
     }
     &__sum {
+      margin-top: -10px;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px ;
       font-size: 25px;
       line-height: 34px;
       font-weight: 700;
@@ -228,33 +298,68 @@
       width: 100%;
     }
     &__reference {
-      margin-top: 11px;
-      padding-bottom: 10px;
+      margin-top: -18px;
+      padding-top: 0px;
+      letter-spacing: 1px;
+      padding-bottom: 6px;
       text-align: center;
-      width: 248px;
+      width: 258px;
       height: 71px;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 24px;
       border-bottom: 1px solid rgba(44, 46, 63, 0.3);
     }
     &__button {
       font-size: 10px;
       line-height: 12px;
-      width: 288px;
+      width: 289px;
       height: 50px;
+      margin-bottom: -20px;
+    }
+    &__list {
+      margin-top: 0px;
+      margin-left: 10px;
+      padding: 0;
+      width: 70%;
+      height: 312px;
+    }
+    &__item {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      width: 108%;
+      font-size: 16px;
+      line-height: 32px;
+      letter-spacing: 0;
     }
     &__head {
       width: 100%;
       text-align: center;
       font-size: 24px;
       line-height: 36px;
+      margin-top: 24px;
       &::after {
         visibility: hidden;
       }
     }
     &__text {
-      width: 90%;
+      width: 84%;
+      font-size: 16px;
+      line-height: 27px;
     }
     &__contact {
+      margin-top: 17px;
+      font-size: 18px;
+      line-height: 34px;
+      letter-spacing: 0;
+      margin-bottom: 10px;
       color: $darck;
+    }
+    &__phone {
+      letter-spacing: 0;
+      font-size: 18px;
+      line-height: 32px;
+      margin-bottom: 38px;
     }
   }
 }

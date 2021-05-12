@@ -42,6 +42,58 @@
   }
 }
 
+@media (max-width:$tablet) {
+  .contacts {
+    font-family: "Montserrat";
+    border-left: 1px solid #D7D9DF;
+    border-right: none;
+    padding-left: 54px;
+    padding-bottom: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    &__email {
+      font-size: 14px;
+      margin-left: 36px;
+      margin-top: -3px;
+      line-height: 17px;
+      color: $orange;
+      position: relative;
+      text-decoration: none;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-image: url(../img/icon/email.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        left: -44px;
+        top: -8px;
+      }
+    }
+    &__phone {
+      font-size: 16px;
+      line-height: 32px;
+      margin-left: 34px;
+      margin-top: -16px;
+      color: $orange;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-image: url(../img/icon/phone.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        left: -39px;
+        top: -4px;
+      }
+    }
+  }
+}
+
 @media (max-width:$mobile) {
   .contacts {
     width: 288px;
@@ -56,13 +108,18 @@
     &__email {
       margin-top: 27px;
       margin-bottom: 12px;
+      margin-left: 14%;
       &::after {
-        left: -40px;
+        left: -43px;
+        top: -7px;
       }
     }
     &__phone {
+      margin-top: 2px;
+      margin-bottom: -6px;
+      margin-left: 35px;
       &::after {
-        left: -40px;
+        left: -36px;
       }
     }
   }
