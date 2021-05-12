@@ -21,18 +21,19 @@
     background: #FFFFFF;
     border: 1px solid rgba(44, 46, 63, 0.3);
     border-radius: 6px;
-    padding: 40px 30px 30px 30px;
+    padding: 42px 32px 32px 32px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    &--active {
+    &:hover {
       border: 3px solid $orange;
+      padding: 40px 30px 30px 30px;
     }
-    &--active > .price__name,
-    &--active > .price__sum {
+    &:hover > .price__name,
+    &:hover > .price__sum {
       color: $orange;
     }
-    &--active > .price__item::after {
+    &:hover > .price__item::after {
       background-image:url(../img/icon/check.svg);
       padding-left: 0px;
     }
@@ -284,8 +285,6 @@
       width: 248px;
       margin-bottom: 0;
       text-align: center;
-      &:last-child {
-      }
     }
     &__sum {
       margin-top: -10px;
