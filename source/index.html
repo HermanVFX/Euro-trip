@@ -21,7 +21,7 @@
             <ul class="header__main-nav-list">
                 <li class="header__item"><a id="btn" class="header__item-index" href="#places">О путешествии</a></li>
                 <li class="header__item"><a id="btn2" class="header__item-index" href="#price">Цены</a></li>
-                <li class="header__item--phone"><a class="header__item-index header__item-index--phone" href="#">+7 (499) -784-684-46</a></li>
+                <li class="header__item header__item--phone"><a class="header__item-index header__item-index--phone" href="#">+7 (499) -784-684-46</a></li>
             </ul>
         </nav>
 
@@ -94,7 +94,6 @@
         <!-- Вкладки городов -->
 
         <section id="tabs" class="tabs">
-            <h2 class="visually-hidden">Подробное описание</h2>
 
             <!-- Кнопки -->
 
@@ -121,7 +120,7 @@
                         <div class="tabs__feedback-block">
                             <p class="tabs__feedback-head">Отзывы</p>
                             <p class="tabs__feedback-text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света! </p>
-                            <img src="img/avatars/1.jpg" alt="Аватар" width="37" height="38"class="tabs__feedback-avatar">
+                            <img src="img/avatars/1.jpg" alt="Аватар" width="37" height="38" class="tabs__feedback-avatar">
                             <p class="tabs__feedback-name">Влада Голицина</p>
                         </div>
                     </div>
@@ -138,7 +137,7 @@
                         <div class="tabs__feedback-block">
                             <p class="tabs__feedback-head">Отзывы</p>
                             <p class="tabs__feedback-text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
-                            <img src="img/avatars/2.jpg" alt="Аватар" width="37" height="38"class="tabs__feedback-avatar">
+                            <img src="img/avatars/2.jpg" alt="Аватар" width="37" height="38" class="tabs__feedback-avatar">
                             <p class="tabs__feedback-name">Маришка</p>
                         </div>
                     </div>
@@ -155,7 +154,7 @@
                         <div class="tabs__feedback-block">
                             <p class="tabs__feedback-head">Отзывы</p>
                             <p class="tabs__feedback-text">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.</p>
-                            <img src="img/avatars/3.jpg" alt="Аватар" width="37" height="38"class="tabs__feedback-avatar">
+                            <img src="img/avatars/3.jpg" alt="Аватар" width="37" height="38" class="tabs__feedback-avatar">
                             <p class="tabs__feedback-name">Михаил Кузьмин</p>
                         </div>
                     </div>
@@ -172,7 +171,7 @@
                         <div class="tabs__feedback-block">
                             <p class="tabs__feedback-head">Отзывы</p>
                             <p class="tabs__feedback-text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую</p>
-                            <img src="img/avatars/4.jpg" alt="Аватар" width="37" height="38"class="tabs__feedback-avatar">
+                            <img src="img/avatars/4.jpg" alt="Аватар" width="37" height="38" class="tabs__feedback-avatar">
                             <p class="tabs__feedback-name">Анастасия Мей</p>
                         </div>
                     </div>
@@ -189,7 +188,7 @@
                         <div class="tabs__feedback-block">
                             <p class="tabs__feedback-head">Отзывы</p>
                             <p class="tabs__feedback-text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)</p>
-                            <img src="img/avatars/5.jpg" alt="Аватар" width="37" height="38"class="tabs__feedback-avatar">
+                            <img src="img/avatars/5.jpg" alt="Аватар" width="37" height="38" class="tabs__feedback-avatar">
                             <p class="tabs__feedback-name">Владимир Мулицин</p>
                         </div>
                     </div>
@@ -197,7 +196,7 @@
             </div>
         </section>
 
-        <!-- price -->
+        <!-- цены -->
 
         <div id="price" class="price">
 
@@ -239,7 +238,7 @@
 
             <div class="price__paopup paopup visually-hidden">
               <div class="paopup__container">
-                <form class="paopup__form">
+                <form action="#" class="paopup__form">
                   <p class="paopup__head">Купить тур </p>
                   <input id="paopupPhone" type="tel" class="paopup__input" placeholder="+7 Введите 10 цифр номера" required>
                   <input id="paopupEmail" type="email" class="paopup__input" placeholder="E-mail">
@@ -257,11 +256,11 @@
         <!-- contact-form -->
 
         <div class="contact">
-            <form action="" class="contact__form">
+            <form action="#" class="contact__form">
                 <p class="contact__head">У Вас остались вопросы?</p>
                 <p class="contact__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
                 <input id="contactPhone" type="tel" class="contact__input contact__input--phone" placeholder="+7 Введите 10 цифр номера" required>
-                <input id="contactEmail" type="e-mail" class="contact__input contact__input--e-mail" placeholder="E-mail">
+                <input id="contactEmail" type="email" class="contact__input contact__input--e-mail" placeholder="E-mail">
                 <button type="button" onclick="contactSaveLocalStorage()" class="contact__button">отправить</button>
             </form>
         </div>

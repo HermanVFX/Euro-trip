@@ -2,7 +2,7 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.082);
+  background-color: rgba(0, 0, 0, 0.459);
   top: 0;
   left: 0;
   &__container {
@@ -13,7 +13,7 @@
     background-image: url(../img/paopup.jpg);
     background-position: left;
     background-repeat: no-repeat;
-    margin: 25% auto auto auto;
+    margin: 10% auto auto auto;
   }
   &__form {
     width: 280px;
@@ -22,6 +22,15 @@
     flex-direction: column;
     float: right;
     padding: 72px 61px 0 59px;
+    position: relative;
+    &::after {
+      content: '*';
+      font-size: 18px;
+      color: $orange;
+      top: 146px;
+      position: absolute;
+      right: 323px;
+    }
   }
   &__head {
     text-align: center;
@@ -32,8 +41,10 @@
   }
   &__input {
     height: 50px;
-    border:1px solid #D7D9DF;
-    border-radius:none;
+    font-size: 14px;
+    padding-left: 18px;
+    line-height: 17px;
+    border:1px solid #c2c3c9;
     margin-top: 20px;
   }
   &__button {
@@ -48,6 +59,11 @@
     width: 176px;
     height: 50px;
     margin: 20px auto auto auto;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    &:hover {
+      background-color: $orange-light;
+    }
   }
   &__success {
     position: absolute;

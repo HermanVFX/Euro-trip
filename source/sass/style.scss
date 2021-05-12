@@ -18,7 +18,7 @@
 
 @import'blocks/paopup.scss';
 
-html {
+.page {
   font-family: "Montserrat"
 }
 .visually-hidden {
@@ -39,7 +39,3 @@ html {
     visibility: visible;
   }
 }
-
-
-p {margin: 0;}
-
