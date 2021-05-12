@@ -3,47 +3,56 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  max-width: 1170px;
-  margin: 0px auto 0px auto;
+  max-width: 1150px;
+  margin: 140px auto 0px auto;
   z-index: 1;
   position: relative;
   &__paopup {
     position: absolute;
   }
   &__description {
-    width: 29%;
+    width: 30.5%;
     max-width: 370px;
     order: 2;
   }
   &__sute {
-    width: 29%;
-    max-width: 310px;
+    width: 27%;
+    max-width: 308px;
     background: #FFFFFF;
     border: 1px solid rgba(44, 46, 63, 0.3);
     border-radius: 6px;
-    padding: 42px 32px 32px 32px;
+    padding: 42px 30px 32px 30px;
+
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     &:hover {
       border: 3px solid $orange;
-      padding: 40px 30px 30px 30px;
+      padding: 40px 28px 30px 28px;
     }
     &:hover > .price__name,
     &:hover > .price__sum {
       color: $orange;
+      letter-spacing: 0.1px;
     }
-    &:hover > .price__item::after {
+    &:hover .price__item::after {
       background-image:url(../img/icon/check.svg);
+      background-position: center;
       padding-left: 0px;
+    }
+    &:hover .price__reference {
+      border-bottom: 1px solid $orange;
     }
   }
   &__name {
-    margin: 0;
+    margin: -4px 0px 2px -2px;
     font-weight: 600;
+    letter-spacing: -1.2px;
     font-size: 28px;
     line-height: 38px;
     width: max-content;
+    transition-property: color, letter-spacing;
+    transition-duration: 0.2s;
   }
   &__sum {
     font-size: 25px;
@@ -53,9 +62,10 @@
   &__reference {
     font-size: 16px;
     line-height: 24px;
-    margin-top: 36px;
+    margin-top: 37px;
     padding-bottom: 28px;
-    width: 310px;
+    margin-bottom: 9px;
+    width: 290px;
     border-bottom: 1px solid rgba(44, 46, 63, 0.3);
   }
   &__list {
@@ -64,13 +74,18 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     line-height: 32px;
+    margin-left: 28px;
     width: 200px;
+    height: 317px;
     padding: 0;
   }
   &__item {
     position: relative;
+    width: 121%;
+    margin-bottom: 6px;
+    margin-top: 6px;
     &::after {
       background-image:url(../img/icon/check-orange.svg);
       content: '';
@@ -85,15 +100,21 @@
     border-radius: 0;
     border: none;
     background-color: $orange;
+    margin-top: 16px;
     font-size: 12px;
     line-height: 15px;
-    letter-spacing: 2px;
     text-transform: uppercase;
     color: #FFFFFF;
     width: 310px;
     height: 75px;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    &:hover {
+      background-color: $orange-light;
+    }
   }
   &__head {
+    margin: 112px 0 50px 22.5%;
     font-weight: 600;
     font-size: 55px;
     line-height: 90px;
@@ -112,20 +133,23 @@
   &__text {
     font-size: 16px;
     line-height: 170%;
+    width: 83%;
+    margin-left: 22.5%;
   }
   &__contact {
     width: 249px;
     font-weight: 500;
     font-size: 22px;
     line-height: 34px;
-    margin-left: 46px;
+    margin-left: 36.4%;
     margin-top: 60px;
   }
   &__phone {
     width: 249px;
     font-size: 20px;
     line-height: 32px;
-    margin-left: 46px;
+    margin-left: 36%;
+    margin-top: 12px;
     position: relative;
     &::after {
       content: '';
@@ -135,7 +159,7 @@
       background-image: url(../img/icon/phone-orange.svg);
       background-repeat: no-repeat;
       background-position: center;
-      left: -30px;
+      left: -50px;
       top: -3px;
     }
   }
@@ -159,9 +183,13 @@
     }
     &__sute {
       width: 288px;
-      padding: 30px 0px 0px 0px;
+      padding: 30px 2px 2px 2px;
       justify-content: center;
       margin: 25px;
+      &:hover {
+        border: 3px solid $orange;
+        padding: 28px 0px 0px 0px;
+      }
       &--active > .price__name {
         line-height: 34px;
         margin-bottom: 0;
@@ -184,7 +212,6 @@
       height: 353px;
       margin-top: 19px;
       margin-left: 6px;
-      // letter-spacing: 0.1px;
     }
     &__sum {
       font-size: 27px;
@@ -220,7 +247,7 @@
       margin-bottom: -2px;
     }
     &__head {
-      width: 100%;
+      width: 55%;
       text-align: center;
       font-size: 30px;
       line-height: 45px;
@@ -332,7 +359,7 @@
       letter-spacing: 0;
     }
     &__head {
-      width: 100%;
+      width: 50%;
       text-align: center;
       font-size: 24px;
       line-height: 36px;

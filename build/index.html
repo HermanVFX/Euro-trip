@@ -21,7 +21,7 @@
             <ul class="header__main-nav-list">
                 <li class="header__item"><a id="btn" class="header__item-index" href="#places">О путешествии</a></li>
                 <li class="header__item"><a id="btn2" class="header__item-index" href="#price">Цены</a></li>
-                <li class="header__item--phone"><a class="header__item-index header__item-index--phone" href="#">+7 (499) -784-684-46</a></li>
+                <li class="header__item header__item--phone"><a class="header__item-index header__item-index--phone" href="#">+7 (499) -784-684-46</a></li>
             </ul>
         </nav>
 
@@ -94,7 +94,6 @@
         <!-- Вкладки городов -->
 
         <section id="tabs" class="tabs">
-            <h2 class="visually-hidden">Подробное описание</h2>
 
             <!-- Кнопки -->
 
@@ -197,7 +196,7 @@
             </div>
         </section>
 
-        <!-- price -->
+        <!-- цены -->
 
         <div id="price" class="price">
 
@@ -239,10 +238,10 @@
 
             <div class="price__paopup paopup visually-hidden">
               <div class="paopup__container">
-                <form class="paopup__form">
+                <form action="#" class="paopup__form">
                   <p class="paopup__head">Купить тур </p>
-                  <input id="paopupPhone" type="tel" class="paopup__input">
-                  <input id="paopupEmail" type="email" class="paopup__input">
+                  <input id="paopupPhone" type="tel" class="paopup__input" placeholder="+7 Введите 10 цифр номера" required="">
+                  <input id="paopupEmail" type="email" class="paopup__input" placeholder="E-mail">
                   <button type="button" onclick="paopupSaveLocalStorage()" class="paopup__button">отправить</button>
                 </form>
                 <div class="paopup__success visually-hidden">
@@ -257,11 +256,11 @@
         <!-- contact-form -->
 
         <div class="contact">
-            <form action="" class="contact__form">
+            <form action="#" class="contact__form">
                 <p class="contact__head">У Вас остались вопросы?</p>
                 <p class="contact__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-                <input id="contactPhone" type="tel" class="contact__input contact__input--phone" placeholder="+7 Введите 10 цифр номера">
-                <input id="contactEmail" type="e-mail" class="contact__input contact__input--e-mail" placeholder="E-mail">
+                <input id="contactPhone" type="tel" class="contact__input contact__input--phone" placeholder="+7 Введите 10 цифр номера" required="">
+                <input id="contactEmail" type="email" class="contact__input contact__input--e-mail" placeholder="E-mail">
                 <button type="button" onclick="contactSaveLocalStorage()" class="contact__button">отправить</button>
             </form>
         </div>

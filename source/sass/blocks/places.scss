@@ -1,12 +1,15 @@
 .places {
   width: 100%;
-  max-width: 1170px;
+  max-width: 1300px;
   margin: 199px auto 0 auto;
   &__head {
     width: 358px;
     font-weight: 600;
     font-size: 55px;
     line-height: 80px;
+    margin-left: 5.7%;
+    margin-bottom: 66px;
+    letter-spacing: -1px;
     color: $darck-light;
     position: relative;
     &::after {
@@ -16,11 +19,12 @@
       height: 4px;
       background-color: $orange;
       left: 0;
-      bottom: -30px;
+      bottom: -34px;
     }
   }
   &__tagline {
     width: 328px;
+    margin-left: 5.7%;
     font-size: 16px;
     line-height: 28px;
     letter-spacing: -0.466667px;
@@ -29,14 +33,21 @@
   }
   &__list {
     padding: 0;
+    margin-top: 54px;
+    margin-left: 14px;
+    margin-right: 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
   &__item {
-    margin: 50px auto 51px auto;
+    margin: 0 31px 98px 31px;
     position: relative;
     list-style: none;
+    &:last-child,
+    &:nth-last-child(2) {
+      margin: 0 60px 0 60px;
+    }
     &:hover .places__button-wrapper{
       visibility:visible;
       opacity: 1;
@@ -77,7 +88,7 @@
     margin: 177px 42px 176px 42px;
     color: white;
     text-decoration: none;
-    padding: 30px 25px 30px 25px;
+    padding: 30px 22px 30px 22px;
   }
 }
 
@@ -86,7 +97,7 @@
     max-width: 634px;
     margin: 80px auto 0 auto;
     &__head {
-      width: 100%;
+      width: 90%;
       text-align: center;
       font-size: 30px;
       letter-spacing: 1.6px;
@@ -110,9 +121,13 @@
       margin-top: 12px;
     }
     &__item {
-      margin: 19px 15px 0px 14px;
+      margin: 0 9px 19px 10px;
       position: relative;
       list-style: none;
+      &:last-child,
+      &:nth-last-child(2) {
+        margin: 0 9px 19px 10px;
+      }
       &:hover .places__button-wrapper{
         visibility:visible;
         opacity: 1;
@@ -125,7 +140,6 @@
     }
     &__name {
       position: absolute;
-      letter-spacing: 2 px;
       bottom: -20px;
       left: 36px;
       padding-bottom: 16px;
@@ -144,7 +158,8 @@
   .places {
     margin: 307px auto 0 auto;
     &__head {
-      width: 100%;
+      width: 90%;
+      margin: auto;
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.4px;

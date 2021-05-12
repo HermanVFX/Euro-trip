@@ -1,14 +1,17 @@
 .footer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
-  max-width: 1170px;
-  margin: 25px auto 81px auto;
+  max-width: 1160px;
+  margin-top: 188px;
+  margin-bottom:81px;
+  margin-left: auto;
+  margin-right: auto;
+  &__contacts
   &__next-way,
-  &__contacts,
   &__corp-way {
-    width: 390px;
+    width: 25.8%;
   }
   &__head {
     width: 100%;
@@ -27,8 +30,6 @@
       width: 47%;
       margin-left: 21px;
     }
-    &__contacts{
-    }
     &__corp-way {
       width: 100%;
     }
@@ -37,21 +38,24 @@
 }
 @media (max-width:$mobile) {
   .footer {
+    width: 90vw;
     margin: 70px auto 25px auto;
     text-align: center;
-    &__next-way{
-      width: 100%;
-    }
-    &__contacts{
-      width: 100%;
-    }
+    flex-direction: column;
+    &__contacts
+    &__next-way,
+    &__corp-way {
+    margin: auto;
+    min-width: 320px;
+    width: 80%;
+  }
     &__head {
-      width: 100%;
+      width: auto;
       font-weight: 600;
       font-size: 18px;
       line-height: 32px;
       color: $darck;
-      margin: 0;
+      margin: auto;
     }
   }
 }

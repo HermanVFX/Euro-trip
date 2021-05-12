@@ -17,19 +17,34 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    top: 167px;
-    left: -146px;
+    top: 134px;
+    left: -128px;
   }
   &__button-list {
     width: 899px;
     border-bottom:1px solid rgba(44, 46, 63, 0.3);
+    padding-bottom: 15px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 80px;
+    margin-bottom: 34px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.415px;
+    margin-top: 92px;
+    margin-left: 10px;
   }
   &__button {
     visibility: hidden;
     margin: 0;
+    & + label {
+      cursor: pointer;
+      transition-property: color;
+      transition-duration: 0.2s;
+    &:hover {
+      color: $orange;
+    }
+    }
     &:checked + label {
       color: $orange;
     }
@@ -48,32 +63,38 @@
     width: 370px;
   }
   &__head {
-    width: 358px;
+    margin-left: 10px;
+    margin-bottom: 48px;
+    width: 258px;
     font-weight: 600;
     font-size: 55px;
     line-height: 90px;
     color: $darck-light;
     position: relative;
+    letter-spacing: -1.2px;
     &::after {
       content: '';
       position: absolute;
       width: 175px;
       height: 2.92px;
       background-color: $orange;
-      left: 0;
-      bottom: -20px;
+      left: -2px;
+      bottom: -18px;
     }
   }
   &__description-text {
     font-size: 16px;
     line-height: 28px;
     letter-spacing: -0.466667px;
+    width: 370px;
+    margin-left: 9px;
     color: rgba(44, 46, 63, 0.7);
   }
   &__pay-button {
     border: none;
     display: block;
-    margin-top: 80px;
+    margin-top: 49px;
+    margin-left: 8px;
     width: max-content;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -84,23 +105,29 @@
     background-color: $orange;
     padding: 30px 40px 30px 40px;
     text-decoration: none;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    &:hover {
+      background-color: $orange-light;
+    }
   }
   &__feedback {
     height: 596px;
     position: relative;
-    margin-left: 100px;
+    margin-left: 5.7vw;
+    margin-top: 46px;
   }
   &__feedback-block {
     position: absolute;
-    right: 0%;
-    top:160px;
+    right: -62.5%;
+    top:112px;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 322px;
-    height: 307px;
-    padding: 30px;
+    height: 322px;
+    padding: 30px 30px 15px 30px;
   }
   &__feedback-head {
     width: 358px;
@@ -110,6 +137,7 @@
     letter-spacing: -0.691667px;
     color: $darck-light;
     position: relative;
+    margin-bottom: 20px;
     &::after {
       content: '';
       position: absolute;
@@ -117,7 +145,7 @@
       height: 0.73px;
       background-color: $orange;
       left: 0;
-      bottom: -10px;
+      bottom: 0px;
     }
   }
   &__feedback-text {
@@ -130,12 +158,13 @@
   &__feedback-avatar {
     border-radius: 50%;
     margin-right: 16px;
-    margin-top: 5px;
+    margin-top: 12px;
   }
   &__feedback-name {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
+    margin-top: 24px;
     letter-spacing: -0.466667px;
   }
 }
@@ -180,6 +209,7 @@
     &__head {
       margin-top: 28px;
       margin-bottom: 0px;
+      margin-left: 0;
       letter-spacing: 1.2px;
       width: 100%;
       text-align: center;
@@ -226,10 +256,21 @@
       object-fit: cover;
     }
     &__feedback-block {
+
       position:relative;
-      margin-top: -448px;
+      margin-top: -360px;
       margin-left: auto;
       margin-right: auto;
+
+      right: 0;
+      top:0;
+      background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 322px;
+      height: 322px;
+      padding: 30px 30px 15px 30px;
     }
     &__feedback-head {
       width: 358px;
@@ -339,7 +380,7 @@
     &__feedback-block {
       width: 228px;
       position:relative;
-      margin-top: -478px;
+      margin-top: -389px;
       margin-left: auto;
       margin-right: auto;
       padding: 30px 20px 34px 20px;

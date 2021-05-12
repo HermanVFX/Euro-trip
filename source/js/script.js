@@ -13,8 +13,12 @@ const albania = document.getElementById('albania');
 const macedonia = document.getElementById('macedonia');
 const montenegro = document.getElementById('montenegro');
 const croatia = document.getElementById('croatia');
+const tryBtn = document.querySelectorAll('.paopup-button')
+const paopup = document.querySelector('.paopup');
+const paopupClose = document.querySelector('.paopup__close-btn');
+const paopupSuccess = document.querySelector('.paopup__success');
 
-
+let openPaopup = false;
 let openMenu = false;
 
 // Открытие-закрытие меню кнопкой
@@ -79,7 +83,6 @@ function checkTab(name){
 
 checkTab(radioBtnTabs);
 // Переключение табов нажатием
-var currentValue = 0;
 function handleClick() {
   checkTab(radioBtnTabs);
 }
@@ -117,24 +120,32 @@ croatiaBtn.addEventListener ('click', () => setTimeout(function(){
   croatia.checked = true;
   handleClick()
 }));
-
-const tryBtn = document.querySelectorAll('.paopup-button')
-const paopup = document.querySelector('.paopup');
-const paopupClose = document.querySelector('.paopup__close-btn');
-let openPaopup = false;
-
-paopupClose.addEventListener ('click', function() {
-  paopup.classList.add('visually-hidden');
-  openPaopup = false;
-  return;
-});
-
+// Окно подтверждения
+const sendSuccess = function () {
+  paopupSuccess.classList.remove('visually-hidden');
+  paopup.classList.remove('visually-hidden');
+    openPaopup = true;
+    return;
+};
+// Функция закрытие всплывающего окна
 const closePaopup = function () {
   paopup.classList.add('visually-hidden');
+  if (paopupSuccess.classList.contains('visually-hidden') ==! true){
+    paopupSuccess.classList.add('visually-hidden');
+  }
+  paopupPhone.value = null;
+  paopupEmail.value = null;
+  contactEmail = null;
+  contactPhone = null;
   openPaopup = false;
   return;
 };
-
+// Кнопка закрытие всплывающего окна
+paopupClose.addEventListener ('click', function() {
+  closePaopup();
+  return;
+});
+// Кнопка открытия всплывающего окна
 for(let i = 0 ; i < tryBtn.length ; i++) {
   const btn = tryBtn[i];
   btn.addEventListener('click' , function() {
@@ -143,11 +154,36 @@ for(let i = 0 ; i < tryBtn.length ; i++) {
     return;
   });
 }
-
+// Закрыте окон нажатием esc
 window.onkeydown = function( event ) {
   if ( event.keyCode === 27 ) {
     if (openPaopup === true) {
       closePaopup();
     }
+  }
+};
+function paopupSaveLocalStorage() {
+  if (paopupPhone.checkValidity() ==! false) {
+    let paopupEmail= document.getElementById("paopupEmail");
+    let paopupPhone= document.getElementById("paopupPhone");
+    localStorage.setItem("email", paopupEmail.value);
+    localStorage.setItem("phone", paopupPhone.value);
+    sendSuccess();
+  } else {
+    paopupPhone.style.outline = '1px solid #FE7865';
+    paopupEmail.style.outline = '1px solid #FE7865';
+  }
+};
+
+function contactSaveLocalStorage() {
+  if (contactPhone.checkValidity() ==! false) {
+  let contactEmail= document.getElementById("contactEmail");
+  let contactPhone= document.getElementById("contactPhone");
+  localStorage.setItem("email", contactEmail.value);
+  localStorage.setItem("phone", contactPhone.value);
+  sendSuccess();
+} else {
+    contactPhone.style.outline = '1px solid #FE7865';
+    contactEmail.style.outline = '1px solid #FE7865';
   }
 };

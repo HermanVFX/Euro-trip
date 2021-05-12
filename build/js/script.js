@@ -132,8 +132,11 @@ const closePaopup = function () {
   paopup.classList.add('visually-hidden');
   if (paopupSuccess.classList.contains('visually-hidden') ==! true){
     paopupSuccess.classList.add('visually-hidden');
-    console.log('help');
   }
+  paopupPhone.value = null;
+  paopupEmail.value = null;
+  contactEmail = null;
+  contactPhone = null;
   openPaopup = false;
   return;
 };
@@ -159,18 +162,28 @@ window.onkeydown = function( event ) {
     }
   }
 };
-// Отправка данных в localStorage
 function paopupSaveLocalStorage() {
-  let paopupEmail= document.getElementById("paopupEmail");
-  let paopupPhone= document.getElementById("paopupPhone");
-  localStorage.setItem("email", paopupEmail.value);
-  localStorage.setItem("phone", paopupPhone.value);
-  sendSuccess();
-}
+  if (paopupPhone.checkValidity() ==! false) {
+    let paopupEmail= document.getElementById("paopupEmail");
+    let paopupPhone= document.getElementById("paopupPhone");
+    localStorage.setItem("email", paopupEmail.value);
+    localStorage.setItem("phone", paopupPhone.value);
+    sendSuccess();
+  } else {
+    paopupPhone.style.outline = '1px solid #FE7865';
+    paopupEmail.style.outline = '1px solid #FE7865';
+  }
+};
+
 function contactSaveLocalStorage() {
+  if (contactPhone.checkValidity() ==! false) {
   let contactEmail= document.getElementById("contactEmail");
   let contactPhone= document.getElementById("contactPhone");
   localStorage.setItem("email", contactEmail.value);
   localStorage.setItem("phone", contactPhone.value);
   sendSuccess();
-}
+} else {
+    contactPhone.style.outline = '1px solid #FE7865';
+    contactEmail.style.outline = '1px solid #FE7865';
+  }
+};

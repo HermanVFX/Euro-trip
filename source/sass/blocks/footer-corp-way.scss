@@ -1,10 +1,10 @@
 .corp-way {
-  width: 340px;
-  padding-left: 49px;
+  margin-left: 48px;
   &__text {
-    margin-top: 20px;
+    margin-top: 22px;
+    width: 110%;
     font-size: 14px;
-    line-height: 170%;
+    line-height: 24px;
   }
 }
 
@@ -19,6 +19,7 @@
     border-top: 1px solid #D7D9DF;
     padding-top: 28px;
     &__text {
+      width: 100%;
       margin-top: 20px;
       font-size: 14px;
       line-height: 170%;
@@ -32,6 +33,9 @@
     width: 288px;
     padding-left: 9px;
     padding-top: 30px;
+    border-top: none;
+    margin-left: auto;
+    margin-right: auto;
     &__text {
       width: 288px;
       margin-top: 20px;
