@@ -241,8 +241,8 @@
               <div class="paopup__container">
                 <form class="paopup__form">
                   <p class="paopup__head">Купить тур </p>
-                  <input id="paopupPhone" type="tel" class="paopup__input">
-                  <input id="paopupEmail" type="email" class="paopup__input">
+                  <input id="paopupPhone" type="tel" class="paopup__input" placeholder="+7 Введите 10 цифр номера" required>
+                  <input id="paopupEmail" type="email" class="paopup__input" placeholder="E-mail">
                   <button type="button" onclick="paopupSaveLocalStorage()" class="paopup__button">отправить</button>
                 </form>
                 <div class="paopup__success visually-hidden">
@@ -260,7 +260,7 @@
             <form action="" class="contact__form">
                 <p class="contact__head">У Вас остались вопросы?</p>
                 <p class="contact__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-                <input id="contactPhone" type="tel" class="contact__input contact__input--phone" placeholder="+7 Введите 10 цифр номера">
+                <input id="contactPhone" type="tel" class="contact__input contact__input--phone" placeholder="+7 Введите 10 цифр номера" required>
                 <input id="contactEmail" type="e-mail" class="contact__input contact__input--e-mail" placeholder="E-mail">
                 <button type="button" onclick="contactSaveLocalStorage()" class="contact__button">отправить</button>
             </form>
