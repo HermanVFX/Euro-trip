@@ -58,6 +58,7 @@
     font-size: 25px;
     line-height: 34px;
     font-weight: 700;
+    margin: 0;
   }
   &__reference {
     font-size: 16px;
@@ -170,7 +171,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 10px auto 0px auto;
+    margin: -60px auto 0px auto;
     z-index: 1;
     position: relative;
     &__paopup {
@@ -185,7 +186,7 @@
       width: 288px;
       padding: 30px 2px 2px 2px;
       justify-content: center;
-      margin: 25px;
+      margin: 0 25px 0 25px;
       &:hover {
         border: 3px solid $orange;
         padding: 28px 0px 0px 0px;
@@ -292,7 +293,8 @@
 
 @media (max-width:$mobile) {
   .price {
-    margin: 150px auto 0px auto;
+    width: 100vw;
+    margin: 160px auto 0px auto;
     &__paopup {
       position: absolute;
     }
@@ -303,9 +305,13 @@
     &__sute {
       width: 286px;
       height: 584px;
-      padding: 30px 0px 0px 0px;
+      padding: 30px 2px 2px 2px;
       justify-content: center;
-      margin: 0px auto 26px auto;
+      margin: 0px 0 26px 0;
+      &:hover {
+        border: 3px solid $orange;
+        padding: 28px 0px 0px 0px;
+      }
     }
     &__name {
       font-size: 24px;

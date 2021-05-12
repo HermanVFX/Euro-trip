@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  max-width: 1156px;
+  max-width: 1170px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -132,6 +132,9 @@
     &__main-nav-toggle {
       width: 50px;
       background-size: 50%;
+    }
+    &__main-nav {
+      width: 100vw;
     }
   }
 }

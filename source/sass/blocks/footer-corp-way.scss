@@ -30,16 +30,13 @@
 
 @media (max-width:$mobile) {
   .corp-way {
-    width: 288px;
-    padding-left: 9px;
+    width: 300px;
     padding-top: 30px;
     border-top: none;
     margin-left: auto;
     margin-right: auto;
     &__text {
       width: 288px;
-      margin-top: 20px;
-      margin-left: -5px;
       font-size: 15px;
       line-height: 24px;
     }

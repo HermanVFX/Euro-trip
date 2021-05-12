@@ -19,6 +19,7 @@
     font-size: 18px;
     line-height: 32px;
     color: $darck;
+    margin: 0;
   }
 }
 
@@ -38,7 +39,7 @@
 }
 @media (max-width:$mobile) {
   .footer {
-    width: 90vw;
+    width: 310px;
     margin: 70px auto 25px auto;
     text-align: center;
     flex-direction: column;
@@ -46,11 +47,10 @@
     &__next-way,
     &__corp-way {
     margin: auto;
-    min-width: 320px;
-    width: 80%;
+    width: 320px;
   }
     &__head {
-      width: auto;
+      width: 300px;
       font-weight: 600;
       font-size: 18px;
       line-height: 32px;
